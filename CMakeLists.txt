@@ -9,6 +9,7 @@ add_executable(
 	src/main.cpp
 	src/http/server.cpp
 	src/http/client.cpp
+	src/http/request.cpp
 	)
 
 target_include_directories(http-server PRIVATE ${PROJECT_SOURCE_DIR}/include)

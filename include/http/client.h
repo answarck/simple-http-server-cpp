@@ -1,16 +1,17 @@
 #include <string>
 #include <unistd.h>
+#include "http/request.h"
 
 using namespace std;
 
 class HttpClient {
 	private:
 		int clientSocket;
-		string request;
+		Request request;
 	public:
 		HttpClient(int serverSocket); 
 		~HttpClient() { close(this->clientSocket); }
 		int getClientSocket() { return this->clientSocket; }	
-		string getRequestBody() { return this->request; }
+		Request getRequest() { return this->request; }
 		void recvRequest();
 };	

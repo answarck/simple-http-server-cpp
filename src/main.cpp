@@ -12,8 +12,8 @@ int main() {
 	int serverSocket = server.getServerSocket();
 	while (true) {
 		HttpClient client(serverSocket);
-		client.recvRequest();
-		cout << client.getRequestBody() << endl;
+		// cout << client.getRequest().getRawRequest() << endl;
+		// cout << client.getRequest().getRequestBody() << endl;
 
 	}
 	return 0;
